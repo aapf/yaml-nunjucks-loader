@@ -12,6 +12,7 @@ describe('[integration] loader', () => {
     const sample1Path = path.resolve(__dirname, 'sample1.js')
     await compile(sample1Path, 'node', 'development', false)
 
+    // eslint-disable-next-line import/no-unresolved, node/no-missing-require
     const sample1 = require('./output/sample1.js')
     const result = sample1({ name: 'example' })
     expect(result).toEqual({ test: { result: 'example' } })
@@ -21,6 +22,7 @@ describe('[integration] loader', () => {
     const sample2Path = path.resolve(__dirname, 'sample2.js')
     await compile(sample2Path, 'node', 'development', false)
 
+    // eslint-disable-next-line import/no-unresolved, node/no-missing-require
     const sample2 = require('./output/sample2.js')
     const result = sample2({ items: [{ name: 'foo', value: 1 }, { name: 'bar', value: 2 }] })
     expect(result).toEqual({ resultItems: [{ name: 'foo', value: 1 }, { name: 'bar', value: 2 }] })
