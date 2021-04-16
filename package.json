@@ -19,7 +19,7 @@
     "loader.js"
   ],
   "engines": {
-    "node": ">=8.3"
+    "node": ">=12.13"
   },
   "scripts": {
     "lint": "scripty",
