@@ -12,11 +12,11 @@ describe('[unit] loader', () => {
     const sample1Path = path.resolve(__dirname, 'sample1.js')
     const modules = await compile(sample1Path)
 
-    const js = modules.find(m => m.name.endsWith('sample1.js'))
+    const js = modules.find((m) => m.name.endsWith('sample1.js'))
     expect(js).toBeTruthy()
     expect(js.source).toMatch(/var sample1 = require\('.\/sample1\.yaml'\);/)
 
-    const yaml = modules.find(m => m.name.endsWith('sample1.yaml'))
+    const yaml = modules.find((m) => m.name.endsWith('sample1.yaml'))
     expect(yaml).toBeTruthy()
     expect(yaml.source).toMatch(/var nunjucks = require\(".*nunjucks\/browser\/nunjucks-slim.*"\);/)
     expect(yaml.source).toMatch(/var YAML = require\(".*yaml.*"\);/)
@@ -30,11 +30,11 @@ describe('[unit] loader', () => {
     const sample2Path = path.resolve(__dirname, 'sample2.js')
     const modules = await compile(sample2Path)
 
-    const js = modules.find(m => m.name.endsWith('sample2.js'))
+    const js = modules.find((m) => m.name.endsWith('sample2.js'))
     expect(js).toBeTruthy()
     expect(js.source).toMatch(/const sample2 = require\('.\/sample2\.yaml'\);/)
 
-    const yaml = modules.find(m => m.name.endsWith('sample2.yaml'))
+    const yaml = modules.find((m) => m.name.endsWith('sample2.yaml'))
     expect(yaml).toBeTruthy()
     expect(yaml.source).toMatch(/var nunjucks = require\(".*nunjucks\/browser\/nunjucks-slim.*"\);/)
     expect(yaml.source).toMatch(/var YAML = require\(".*yaml.*"\);/)
@@ -50,11 +50,11 @@ describe('[unit] loader', () => {
       nunjucks: { autoescape: true, throwOnUndefined: true }
     })
 
-    const js = modules.find(m => m.name.endsWith('sample2.js'))
+    const js = modules.find((m) => m.name.endsWith('sample2.js'))
     expect(js).toBeTruthy()
     expect(js.source).toMatch(/const sample2 = require\('.\/sample2\.yaml'\);/)
 
-    const yaml = modules.find(m => m.name.endsWith('sample2.yaml'))
+    const yaml = modules.find((m) => m.name.endsWith('sample2.yaml'))
     expect(yaml).toBeTruthy()
     expect(yaml.source).toMatch(/var nunjucks = require\(".*nunjucks\/browser\/nunjucks-slim.*"\);/)
     expect(yaml.source).toMatch(/var YAML = require\(".*yaml.*"\);/)
