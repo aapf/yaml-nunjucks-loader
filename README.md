@@ -19,20 +19,20 @@ yaml-nunjucks-loader requires [yaml](https://www.npmjs.com/package/yaml) and [Nu
 Install required libraries to your project:
 
 ```sh
-$ npm install --save yaml nunjucks
+npm install --save yaml nunjucks
 ```
 
 Install yaml-nunjucks-loader:
 
 ```sh
-$ npm install --save-dev yaml-nunjucks-loader
+npm install --save-dev yaml-nunjucks-loader
 ```
 
 If you use Yarn, execute the following instead:
 
 ```sh
-$ yarn add yaml nunjucks
-$ yarn add --dev yaml-nunjucks-loader
+yarn add yaml nunjucks
+yarn add --dev yaml-nunjucks-loader
 ```
 
 ## Usage
