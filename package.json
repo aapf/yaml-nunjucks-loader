@@ -33,7 +33,7 @@
   },
   "peerDependencies": {
     "nunjucks": "^3.2.3",
-    "webpack": "^4.44.2",
+    "webpack": "^5.49.0",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
@@ -49,7 +49,7 @@
     "nunjucks": "^3.2.3",
     "prettier-eslint-cli": "^5.0.1",
     "scripty": "^2.0.0",
-    "webpack": "^4.44.2",
+    "webpack": "^5.49.0",
     "yaml": "^1.10.2"
   },
   "dependencies": {
